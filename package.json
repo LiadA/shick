@@ -1,0 +1,73 @@
+{
+  "name": "behealthy",
+  "version": "3.0.0-monorepo",
+  "description": "Healthy.io monorepo",
+  "homepage": "https://healthy.io",
+  "license": "UNLICENSED",
+  "author": "Healthy.io",
+  "private": true,
+  "workspaces": [
+    "projects/*",
+    "jobs/*",
+    "infra/*"
+  ],
+  "scripts": {
+    "dbstick": "NODE_ENV=development node ./infra/dbstick/index.js",
+    "dev:setup": "NODE_ENV=development node helpers/dbPopulator.js",
+    "log": "npm run lint:log && npm run test:log",
+    "pretest": "npm run test:clean && npm run lint && npm run test:setup",
+    "test": "jest --coverage",
+    "test:watch": "npm run test:setup && jest --watchAll",
+    "test:clean": "rimraf ./coverage",
+    "test:log": "jest --coverage --json --outputFile=logs/test/$(date +%F_%R).json",
+    "test:setup": "NODE_ENV=test node helpers/dbPopulator.js",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "lint:log": "eslint --output-file logs/lint/$(date +%F_%R).json --format json --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "lint:staged": "lint-staged",
+    "lint:fix": "npm run lint -- --fix",
+    "prettify": "prettier --write \"**/*.{scss,js,json}\""
+
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.6",
+    "babel-jest": "23.4.2",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-export-extensions": "6.22.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "eslint": "5.5.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.0.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "21.22.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "faker": "4.1.0",
+    "jest": "23.5.0",
+    "lint-staged": "7.2.2",
+    "pre-commit": "1.2.2",
+    "prettier": "1.14.2",
+    "prettier-eslint": "8.8.2"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": [
+      "eslint --no-ignore --fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OwnHealthIL/behealthy.git"
+  },
+  "engines": {
+    "npm": ">=5",
+    "node": ">=8.11.0"
+  }
+}

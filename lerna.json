@@ -1,0 +1,9 @@
+{
+  "lerna": "2.11.0",
+  "packages": ["projects/*", "jobs/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "rejectCycles": true,
+  "loglevel": "verbose"
+}
