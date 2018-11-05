@@ -20,10 +20,10 @@ module.exports = function buildEvent(sequelize, DataTypes) {
   });
 
   Event.associate = models => {
-    // Event.Users = Event.hasMany(models.User, {
-    //   as: 'invited',
-    //   foreignKey: { name: 'userId', allowNull: false },
-    // }); // TODO:
+    Event.Users = Event.belongsToMany(models.User, {
+      as: 'invited',
+      through: 'EventUser',
+    });
     Event.User = Event.belongsTo(models.User, {
       as: 'celebrater',
       foreignKey: { name: 'userId', allowNull: false },

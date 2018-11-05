@@ -1,6 +1,5 @@
 {
   "statusType": ["married", "engaged", "single", "divorce", "pregnenat", "inRelationship"],
-  "rankNumbers": [1, 2, 3, 4, 5],
   "dressCodes": ["goingOut", "wedding", "casual"],
   "itemTypes": ["shoes", "dresses", "skirts", "pants", "shirts", "jackets", "purses"]
 }

@@ -1,5 +1,3 @@
-const { rankNumbers } = require('../enums.json');
-
 module.exports = function buildRecomendation(sequelize, DataTypes) {
   const Recomendation = sequelize.define('Recomendation', {
     comment: {
@@ -7,8 +5,13 @@ module.exports = function buildRecomendation(sequelize, DataTypes) {
       allowNull: false,
     },
     rank: {
-      type: DataTypes.ENUM(...rankNumbers),
+      type: DataTypes.INTEGER,
+      allowNull: false,
       defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 5,
+      },
     },
     mustHave: {
       type: DataTypes.ARRAY(DataTypes.STRING),

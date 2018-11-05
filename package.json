@@ -12,7 +12,7 @@
     "infra/*"
   ],
   "scripts": {
-    "dbstick": "NODE_ENV=development node ./infra/dbstick/index.js",
+    "dblocal": "NODE_ENV=development node ./projects/dblocal/index.js",
     "dev:setup": "NODE_ENV=development node helpers/dbPopulator.js",
     "log": "npm run lint:log && npm run test:log",
     "pretest": "npm run test:clean && npm run lint && npm run test:setup",

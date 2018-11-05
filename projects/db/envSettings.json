@@ -1,0 +1,12 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "shick_dev"
+  },
+  "test": {
+    "username": "postgres",
+    "password": null,
+    "database": "shick_test"
+  }
+}

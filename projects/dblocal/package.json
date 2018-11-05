@@ -1,0 +1,19 @@
+{
+  "name": "dblocal",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "repl": "index.js"
+  },
+  "author": "Shickoniot",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "babylon": "6.18.0",
+    "db": "1.0.0",
+    "recast": "0.15.2",
+    "repl.history": "0.1.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "4.0.0"
+  }
+}

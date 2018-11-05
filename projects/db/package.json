@@ -1,0 +1,19 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "Shickoniot",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "pg": "7.4.3",
+    "pg-hstore": "2.3.2",
+    "sequelize": "4.38.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "4.0.0"
+  }
+}

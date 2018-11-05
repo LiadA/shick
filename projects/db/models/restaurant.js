@@ -1,5 +1,3 @@
-const { rankNumbers } = require('../enums.json');
-
 module.exports = function buildRestaurant(sequelize, DataTypes) {
   const Restaurant = sequelize.define('Restaurant', {
     name: {
@@ -11,8 +9,13 @@ module.exports = function buildRestaurant(sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
     rank: {
-      type: DataTypes.ENUM(...rankNumbers),
+      type: DataTypes.INTEGER,
+      allowNull: false,
       defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 5,
+      },
     },
   });
 
