@@ -25,10 +25,6 @@ module.exports = function buildCloth(sequelize, DataTypes) {
   });
 
   Cloth.associate = models => {
-    // Event.Users = Event.hasMany(models.User, {
-    //   as: 'invited',
-    //   foreignKey: { name: 'userId', allowNull: false },
-    // }); //TODO:
     Cloth.User = Cloth.belongsTo(models.User, {
       as: 'owner',
       foreignKey: { name: 'userId', allowNull: false },

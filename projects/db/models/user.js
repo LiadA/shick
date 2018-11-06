@@ -46,6 +46,10 @@ module.exports = function buildUser(sequelize, DataTypes) {
       as: 'clothes',
       foreignKey: { name: 'userId', allowNull: false },
     });
+    User.Series = User.hasMany(models.Series, {
+      as: 'series',
+      foreignKey: { name: 'userId', allowNull: false },
+    });
     User.Events = User.belongsToMany(models.Event, {
       as: 'events',
       through: 'EventUser',

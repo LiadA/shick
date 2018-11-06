@@ -16,7 +16,7 @@ module.exports = function buildRecomendation(sequelize, DataTypes) {
     mustHave: {
       type: DataTypes.ARRAY(DataTypes.STRING),
     },
-    BeCareful: {
+    beCareful: {
       type: DataTypes.ARRAY(DataTypes.STRING),
     },
   });

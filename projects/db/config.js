@@ -45,10 +45,6 @@ const initOptions = () => {
       envOptions.logging = () => {};
       envOptions.sync = { force: true };
       break;
-    case 'staging':
-      envOptions.logging = () => {};
-      envOptions.port = 5432;
-      break;
     case 'production':
       envOptions.logging = () => {};
       envOptions.port = 5432;

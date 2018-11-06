@@ -1,5 +1,8 @@
 {
-  "statusType": ["married", "engaged", "single", "divorce", "pregnenat", "inRelationship"],
+  "statusType": ["married", "engaged", "single", "divorced", "pregnenat", "inRelationship"],
   "dressCodes": ["goingOut", "wedding", "casual"],
-  "itemTypes": ["shoes", "dresses", "skirts", "pants", "shirts", "jackets", "purses"]
+  "itemTypes": ["shoes", "dresses", "skirts", "pants", "shirts", "jackets", "purses"],
+  "sourceOptions": ["netflix", "yes", "hot", "internet", "other", "keshet", "reshet"],
+  "seriesTypeOptions": ["comedy", "romance", "tragedy", "drama", "horror", "other"],
+  "rankOptions": ["must see", "fun", "nice to have", "before sleep", "finish in a day", "good"]
 }
