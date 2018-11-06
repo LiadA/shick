@@ -20,8 +20,8 @@ module.exports = function buildRestaurant(sequelize, DataTypes) {
   });
 
   Restaurant.associate = models => {
-    Restaurant.Recomendations = Restaurant.hasMany(models.Recomendation, {
-      as: 'recomendations',
+    Restaurant.Recommendations = Restaurant.hasMany(models.Recommendation, {
+      as: 'recommendations',
       foreignKey: { name: 'restaurantId', allowNull: false },
     });
   };

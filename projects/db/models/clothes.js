@@ -1,7 +1,7 @@
 const { dressCodes, itemTypes } = require('../enums.json');
 
-module.exports = function buildCloth(sequelize, DataTypes) {
-  const Cloth = sequelize.define('Cloth', {
+module.exports = function buildClothes(sequelize, DataTypes) {
+  const Clothes = sequelize.define('Clothes', {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -24,11 +24,11 @@ module.exports = function buildCloth(sequelize, DataTypes) {
     },
   });
 
-  Cloth.associate = models => {
-    Cloth.User = Cloth.belongsTo(models.User, {
+  Clothes.associate = models => {
+    Clothes.User = Clothes.belongsTo(models.User, {
       as: 'owner',
       foreignKey: { name: 'userId', allowNull: false },
     });
   };
-  return Cloth;
+  return Clothes;
 };

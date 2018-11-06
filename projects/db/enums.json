@@ -1,5 +1,5 @@
 {
-  "statusType": ["married", "engaged", "single", "divorced", "pregnenat", "inRelationship"],
+  "statusType": ["married", "engaged", "single", "divorced", "pregnant", "inRelationship"],
   "dressCodes": ["goingOut", "wedding", "casual"],
   "itemTypes": ["shoes", "dresses", "skirts", "pants", "shirts", "jackets", "purses"],
   "sourceOptions": ["netflix", "yes", "hot", "internet", "other", "keshet", "reshet"],

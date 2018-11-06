@@ -1,9 +1,9 @@
 const { getSequelize } = require('db');
 const {
-  clothFactory,
+  clothesFactory,
   userFactory,
   restaurantFactory,
-  recomendationFactory,
+  recommendationFactory,
   seriesFactory,
   gossipFactory,
   recipeFactory,
@@ -23,13 +23,13 @@ const populateDb = async () => {
   }
   await userFactory({ name: 'shir' });
   try {
-    await clothFactory();
+    await clothesFactory();
   } catch (error) {
     console.log(error);
   }
   await eventFactory();
   await restaurantFactory();
-  await recomendationFactory();
+  await recommendationFactory();
   await seriesFactory();
   await gossipFactory();
   await recipeFactory();

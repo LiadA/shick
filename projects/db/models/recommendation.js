@@ -1,5 +1,5 @@
-module.exports = function buildRecomendation(sequelize, DataTypes) {
-  const Recomendation = sequelize.define('Recomendation', {
+module.exports = function buildRecommendation(sequelize, DataTypes) {
+  const Recommendation = sequelize.define('Recommendation', {
     comment: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,16 +21,16 @@ module.exports = function buildRecomendation(sequelize, DataTypes) {
     },
   });
 
-  Recomendation.associate = models => {
-    Recomendation.Restaurant = Recomendation.belongsTo(models.Restaurant, {
+  Recommendation.associate = models => {
+    Recommendation.Restaurant = Recommendation.belongsTo(models.Restaurant, {
       as: 'restaurant',
       foreignKey: { name: 'restaurantId', allowNull: false },
     });
-    Recomendation.User = Recomendation.belongsTo(models.User, {
+    Recommendation.User = Recommendation.belongsTo(models.User, {
       as: 'user',
       foreignKey: { name: 'userId', allowNull: false },
     });
   };
 
-  return Recomendation;
+  return Recommendation;
 };

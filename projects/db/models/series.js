@@ -1,6 +1,6 @@
 const { sourceOptions, seriesTypeOptions, rankOptions } = require('../enums.json');
 
-module.exports = function buildCloth(sequelize, DataTypes) {
+module.exports = function buildSeries(sequelize, DataTypes) {
   const Series = sequelize.define('Series', {
     name: {
       type: DataTypes.STRING,

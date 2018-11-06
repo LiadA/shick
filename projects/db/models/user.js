@@ -34,15 +34,15 @@ module.exports = function buildUser(sequelize, DataTypes) {
     },
   });
   User.associate = models => {
-    User.Recomendations = User.hasMany(models.Recomendation, {
-      as: 'recomendations',
+    User.Recommendations = User.hasMany(models.Recommendation, {
+      as: 'recommendations',
       foreignKey: { name: 'userId', allowNull: false },
     });
-    User.Gossips = User.hasMany(models.Gossip, {
-      as: 'gossips',
+    User.Gossip = User.hasMany(models.Gossip, {
+      as: 'gossip',
       foreignKey: { name: 'userId', allowNull: false },
     });
-    User.Cloth = User.hasMany(models.Cloth, {
+    User.Clothes = User.hasMany(models.Clothes, {
       as: 'clothes',
       foreignKey: { name: 'userId', allowNull: false },
     });

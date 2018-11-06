@@ -22,9 +22,9 @@ const userFactory = async (overrides = {}) => {
 };
 /* eslint-enable no-await-in-loop */
 
-const clothFactory = async (overrides = {}) => {
+const clothesFactory = async (overrides = {}) => {
   const user = await models.User.findOne();
-  return models.Cloth.create({
+  return models.Clothes.create({
     userId: user.id,
     title: faker.name.title(),
     date: Date.now(),
@@ -44,10 +44,10 @@ const restaurantFactory = async (overrides = {}) =>
     ...overrides,
   });
 
-const recomendationFactory = async (overrides = {}) => {
+const recommendationFactory = async (overrides = {}) => {
   const user = await models.User.findOne();
   const restaurant = await models.Restaurant.findOne();
-  return models.Recomendation.create({
+  return models.Recommendation.create({
     comment: faker.random.words(),
     rank: faker.random.number({ min: 0, max: 5 }),
     mustHave: [faker.random.word()],
@@ -102,10 +102,10 @@ const eventFactory = async (overrides = {}) => {
 };
 
 module.exports = {
-  clothFactory,
+  clothesFactory,
   userFactory,
   restaurantFactory,
-  recomendationFactory,
+  recommendationFactory,
   seriesFactory,
   gossipFactory,
   recipeFactory,
