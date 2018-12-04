@@ -1,10 +1,9 @@
 {
-  "name": "behealthy",
+  "name": "shick",
   "version": "3.0.0-monorepo",
-  "description": "Healthy.io monorepo",
-  "homepage": "https://healthy.io",
+  "description": "shick monorepo",
   "license": "UNLICENSED",
-  "author": "Healthy.io",
+  "author": "shick",
   "private": true,
   "workspaces": [
     "projects/*",
@@ -65,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/OwnHealthIL/behealthy.git"
+    "url": "git://github.com/LiadA/shick.git"
   },
   "engines": {
     "npm": ">=5",
