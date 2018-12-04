@@ -21,13 +21,14 @@ const populateDb = async () => {
   } catch (error) {
     console.log(error);
   }
-  await userFactory({ name: 'shir' });
+  const user = await userFactory({ name: 'shir' });
   try {
     await clothesFactory();
   } catch (error) {
     console.log(error);
   }
-  await eventFactory();
+  const event = await eventFactory();
+  user.addEvent(event);
   await restaurantFactory();
   await recommendationFactory();
   await seriesFactory();

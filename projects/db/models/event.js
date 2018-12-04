@@ -24,6 +24,7 @@ module.exports = function buildEvent(sequelize, DataTypes) {
       as: 'invited',
       through: 'EventUser',
     });
+    // TODO: Add it as a column in the join table
     Event.User = Event.belongsTo(models.User, {
       as: 'celebrater',
       foreignKey: { name: 'userId', allowNull: false },

@@ -97,6 +97,7 @@ const eventFactory = async (overrides = {}) => {
     description: faker.random.words(),
     duration: 2,
     userId: user.id,
+    invited: [{ userId: user.id }],
     ...overrides,
   });
 };
