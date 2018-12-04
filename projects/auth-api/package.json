@@ -1,0 +1,21 @@
+{
+    "name": "auth-api",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "description": "",
+    "private": true,
+    "dependencies": {
+      "db": "1.0.0",
+      "body-parser": "1.18.3",
+      "cors": "2.8.4",
+      "express": "4.16.3",
+      "express-unless": "0.5.0"
+    },
+    "devDependencies": {
+      "nodemon": "1.18.4"
+    },
+    "scripts": {
+      "start": "nodemon ./src/index.js"
+    }
+  }
+  
