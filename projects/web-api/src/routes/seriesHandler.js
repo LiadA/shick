@@ -19,6 +19,20 @@ const getSeries = async (req, res) => {
   res.json(data);
 };
 
+const createSeries = async (req, res) => {
+  const { body, user } = req;
+  try {
+    await Series.create({ ...body, userId: user.id });
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+    return;
+  }
+
+  res.sendStatus(200);
+};
+
 module.exports = {
   getSeries,
+  createSeries,
 };

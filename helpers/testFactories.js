@@ -14,6 +14,8 @@ const userFactory = async (overrides = {}) => {
         birthControl: 'yasmin',
         status: faker.random.arrayElement(enums.statusType),
         email: faker.internet.email(),
+        username: faker.internet.userName(),
+        password: '12345',
         ...overrides,
       });
     } catch (error) {}

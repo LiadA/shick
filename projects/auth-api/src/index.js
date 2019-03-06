@@ -1,12 +1,10 @@
 /* eslint-disable global-require, no-console */
 const { initDb } = require('db');
-const { initAuth } = require('./auth');
 
 const startServer = async () => {
   // Start listening on given port or default
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 3001;
   await initDb();
-  await initAuth();
   return port;
 };
 

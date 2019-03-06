@@ -6,15 +6,8 @@ module.exports = function buildClothes(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    startReserve: {
-      type: DataTypes.DATE,
-    },
-    endReserve: {
-      type: DataTypes.DATE,
+    reservations: {
+      type: DataTypes.JSONB,
     },
     dressCode: {
       type: DataTypes.ENUM(...dressCodes),

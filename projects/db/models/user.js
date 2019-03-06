@@ -32,7 +32,16 @@ module.exports = function buildUser(sequelize, DataTypes) {
       validate: { isEmail: true },
       unique: true,
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
+
   User.associate = models => {
     User.Recommendations = User.hasMany(models.Recommendation, {
       as: 'recommendations',

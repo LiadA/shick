@@ -19,6 +19,20 @@ const getGossip = async (req, res) => {
   res.json(data);
 };
 
+const createGossip = async (req, res) => {
+  const { body, user } = req;
+  try {
+    await Gossip.create({ ...body, userId: user.id });
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+    return;
+  }
+
+  res.sendStatus(200);
+};
+
 module.exports = {
   getGossip,
+  createGossip,
 };
